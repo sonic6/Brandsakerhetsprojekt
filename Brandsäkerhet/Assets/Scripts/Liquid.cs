@@ -17,7 +17,7 @@ public class Liquid : MonoBehaviour
         {
             if (time >= timeMax)
             {
-                Instantiate(LiquidUnit, transform.position, transform.rotation);
+                Instantiate(LiquidUnit, bottleCap.position, transform.rotation);
                 time = 0;
             }
         }
