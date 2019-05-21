@@ -7,9 +7,10 @@ public class TakeBlanket : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.transform.parent.transform.parent.GetComponent<VRTK_ControllerEvents>().triggerClicked == true) //This will check if the trigger button of the VR controller that's colliding is all the way down
-        {
+        if (other.GetComponentInParent<VRTK_ControllerEvents>().triggerPressed == true)
+        { 
             fireBlanket.SetActive(true);
+            other.GetComponentInParent<VRTK_InteractGrab>().AttemptGrab();
         }
     }
 }
