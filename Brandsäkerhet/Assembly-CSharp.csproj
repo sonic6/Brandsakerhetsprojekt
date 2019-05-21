@@ -63,8 +63,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\BlanketExtinguish.cs" />
+    <Compile Include="Assets\Scripts\BurnAfterTime.cs" />
     <Compile Include="Assets\Scripts\DestroyWaterParticle.cs" />
+    <Compile Include="Assets\Scripts\fireExtinguisher.cs" />
     <Compile Include="Assets\Scripts\Liquid.cs" />
+    <Compile Include="Assets\Scripts\SmokeBuildUp.cs" />
+    <Compile Include="Assets\Scripts\TakeBlanket.cs" />
     <Compile Include="Assets\Scripts\Test.cs" />
     <Compile Include="Assets\Scripts\WaterOnOil.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
@@ -514,6 +518,7 @@
     <None Include="Assets\SteamVR\Resources\SteamVR_Fade.shader" />
     <None Include="Assets\SteamVR\Resources\SteamVR_ClearAll.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Hints\Shaders\ControllerButtonHints.shader" />
+    <None Include="Assets\Shaders\fireSmoke.shader" />
     <None Include="Assets\VRTK\Documentation.txt" />
     <None Include="Assets\VRTK\Source\Scripts\Internal\Shaders\UIOverlay.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Teleport\Shaders\Highlight.shader" />
