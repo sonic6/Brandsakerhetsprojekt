@@ -1,7 +1,7 @@
 ﻿using VRTK;
 using UnityEngine;
 
-public class fireExtinguisher : MonoBehaviour
+public class FireExtinguisher : MonoBehaviour
 {
     [SerializeField] GameObject pulver;
     [SerializeField] Transform nozzle;
