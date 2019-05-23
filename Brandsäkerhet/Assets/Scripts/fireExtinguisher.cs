@@ -16,7 +16,8 @@ public class FireExtinguisher : MonoBehaviour
 
         if (transform.GetComponentInParent<SteamVR_TrackedObject>() != null)
         {
-            if (time >= sprayFrequency && GetComponentInParent<SteamVR_TrackedObject>().gameObject.GetComponentInChildren<VRTK_ControllerEvents>().gripPressed == true)
+            VRTK_ControllerEvents controller = GetComponentInParent<SteamVR_TrackedObject>().gameObject.GetComponentInChildren<VRTK_ControllerEvents>();
+            if (time >= sprayFrequency && controller.gripClicked == true)
             {
                 GameObject newPulver = Instantiate(pulver, nozzle.position, transform.rotation);
                 newPulver.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * pulverThrust);
