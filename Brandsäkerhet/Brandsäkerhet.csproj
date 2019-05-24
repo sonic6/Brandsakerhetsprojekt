@@ -621,6 +621,7 @@
     <Compile Include="Assets\Scripts\BlanketExtinguish.cs" />
     <Compile Include="Assets\Scripts\BurnAfterTime.cs" />
     <Compile Include="Assets\Scripts\DestroyWaterParticle.cs" />
+    <Compile Include="Assets\Scripts\EndScene.cs" />
     <Compile Include="Assets\Scripts\ExtinguishByPulver.cs" />
     <Compile Include="Assets\Scripts\fireExtinguisher.cs" />
     <Compile Include="Assets\Scripts\Liquid.cs" />
