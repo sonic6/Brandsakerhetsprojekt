@@ -21,8 +21,12 @@ public class ExtinguishByPulver : MonoBehaviour
 
             pulverCollided = false;
 
-            if (myStartLife.startLifetimeMultiplier < 0.01f)
-                Destroy(GetComponentInChildren<ParticleSystem>());
+            if (myStartLife.startLifetimeMultiplier < 0.01f && GetComponentInChildren<ParticleSystem>())
+            {
+                Destroy(GetComponentInChildren<ParticleSystem>()); //once for the fire particles
+                Destroy(GetComponentInChildren<ParticleSystem>()); //once for the smoke particles
+                InfoCollector.fireCondition = false;
+            }
         }
 
         
