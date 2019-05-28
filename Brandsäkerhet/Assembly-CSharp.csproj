@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\EndScene.cs" />
     <Compile Include="Assets\Scripts\ExtinguishByPulver.cs" />
     <Compile Include="Assets\Scripts\FireExtinguisher.cs" />
+    <Compile Include="Assets\Scripts\InfoCollector.cs" />
     <Compile Include="Assets\Scripts\Liquid.cs" />
     <Compile Include="Assets\Scripts\SmokeBuildUp.cs" />
     <Compile Include="Assets\Scripts\TakeBlanket.cs" />
