@@ -20,7 +20,7 @@ public class FireExtinguisher : MonoBehaviour
             if (time >= sprayFrequency && controller.gripClicked == true)
             {
                 GameObject newPulver = Instantiate(pulver, nozzle.position, transform.rotation);
-                newPulver.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * pulverThrust);
+                newPulver.GetComponent<Rigidbody>().AddRelativeForce(Vector3.back * pulverThrust);
                 time = 0;
             }
         }
