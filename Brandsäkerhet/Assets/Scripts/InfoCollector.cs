@@ -14,4 +14,5 @@ public class InfoCollector : MonoBehaviour
         doorsCondition = false;
         windowCondition = false;
     }
+    
 }

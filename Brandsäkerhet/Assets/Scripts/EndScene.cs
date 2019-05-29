@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class EndScene : MonoBehaviour
@@ -20,6 +18,16 @@ public class EndScene : MonoBehaviour
 
     public void EndGame()
     {
+        if(InfoCollector.fireCondition == false)
+            PlayerPrefs.SetInt("fireCondition", 0);
+        else if(InfoCollector.fireCondition == true)
+            PlayerPrefs.SetInt("fireCondition", 1);
+        if (InfoCollector.fireIncreased == true)
+            PlayerPrefs.SetInt("fireIncreased", 1);
+        else if (InfoCollector.fireIncreased == false)
+            PlayerPrefs.SetInt("fireIncreased", 0);
+
+        PlayerPrefs.SetInt("Death", 0);
         SceneManager.LoadScene(nextScene);
     }
 
