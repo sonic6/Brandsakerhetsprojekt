@@ -16,7 +16,10 @@ public class BlanketExtinguish : MonoBehaviour
     private void FixedUpdate()
     {
         if (myTriggers == triggerChildren.Length)
+        {
             Destroy(GetComponentInChildren<ParticleSystem>());
+            InfoCollector.fireCondition = false;
+        }
     }
 }
 
