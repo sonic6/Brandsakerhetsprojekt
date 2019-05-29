@@ -425,11 +425,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 441482e8936e35048a1dffac814e3ef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Profile: {fileID: 11400000, guid: d381bad03889ac84487a2aa37d091e2b, type: 2}
-  m_StaticLightingSkyUniqueID: 2
-  <skySettings>k__BackingField: {fileID: 0}
-  m_VolumeSkyList:
-  - {fileID: 8822391370436710437, guid: d381bad03889ac84487a2aa37d091e2b, type: 2}
 --- !u!114 &1413319693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -442,15 +437,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isGlobal: 1
-  priority: 0
-  blendDistance: 0
-  weight: 1
-  sharedProfile: {fileID: 11400000, guid: d381bad03889ac84487a2aa37d091e2b, type: 2}
-  m_PreviousLayer: 0
-  m_PreviousPriority: 0
-  m_InternalProfile: {fileID: 0}
-  m_TempColliders: []
 --- !u!4 &1413319694
 Transform:
   m_ObjectHideFlags: 0
@@ -640,12 +626,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2660098364203869868 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2660098364203869868, guid: c24c964c4d859b84bb5c22100c909a80,
-    type: 3}
-  m_PrefabInstance: {fileID: 3366694922101046739}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3366694922101046739
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -712,24 +692,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 811144365, guid: c24c964c4d859b84bb5c22100c909a80, type: 3}
-      propertyPath: g_smoke
-      value: 
-      objectReference: {fileID: 2660098364203869868}
-    - target: {fileID: 811144365, guid: c24c964c4d859b84bb5c22100c909a80, type: 3}
-      propertyPath: smoke
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2183416802871549093, guid: c24c964c4d859b84bb5c22100c909a80,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.99
-      objectReference: {fileID: 0}
-    - target: {fileID: 7194236395023145074, guid: c24c964c4d859b84bb5c22100c909a80,
-        type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 0.0001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c24c964c4d859b84bb5c22100c909a80, type: 3}
