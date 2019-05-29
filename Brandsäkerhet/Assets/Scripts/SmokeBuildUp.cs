@@ -15,14 +15,17 @@ public class SmokeBuildUp : MonoBehaviour
     private enum renderMode { Exponential };
     private enum smokeMode { Even, Vertical, None };
 
+    [SerializeField] private ParticleSystem[] particleSystems;
+    private ParticleSystem fire;
+
     [Tooltip("The speed at whitch the smoke builds up.(not implemented yet.)")]
     [SerializeField] private float buildUpSpeed;
 
     [Tooltip("Delay in seconds before the smoke starts to build up.")]
     [SerializeField] private float smokeDelay;
 
-    [Tooltip("Makes the build up exponential. This is purely a mechanical choice, and shouldn't have much impact on gameplay.")]
-    [SerializeField] private renderMode rm = new renderMode();
+    // Legacy code. I don't wanna re-write a bunch of shit, so this enum remains.
+    private renderMode rm = new renderMode();
 
     [Tooltip("Decides how the smoke builds up in the world. \n" +
         "Standard: smoke builds up evenly. \n" +
@@ -34,6 +37,7 @@ public class SmokeBuildUp : MonoBehaviour
         "(I will make the script more self sufficient at a later date.. If I have time.)")]
     [SerializeField] private GameObject g_smoke;
 
+
     void Start()
     {
         if (rm == renderMode.Exponential)
@@ -41,20 +45,18 @@ public class SmokeBuildUp : MonoBehaviour
             RenderSettings.fogMode = FogMode.Exponential;
             StartCoroutine("ExponentialBuildUp");
         }
-        //else if (rm == renderMode.Linear)
-        //{
-        //    RenderSettings.fogMode = FogMode.Linear;
-        //    StartCoroutine("LinearBuildUp");
-        //}
 
         if (smoke == smokeMode.Even)
         {
             RenderSettings.fogColor = new Color(0.2f, 0.2f, 0.2f);
             RenderSettings.fog = true;
         }
-        else if (smoke == smokeMode.Vertical)
-        {
 
+        particleSystems = GetComponentsInChildren<ParticleSystem>();
+        foreach (ParticleSystem c in particleSystems)
+        {
+            if (c.gameObject.name == "Fire")
+                fire = c;
         }
     }
 
@@ -63,7 +65,7 @@ public class SmokeBuildUp : MonoBehaviour
         yield return new WaitForSeconds(smokeDelay);
 
         RenderSettings.fogDensity = 0.0f;
-        while (smoke == smokeMode.Even)
+        while (smoke == smokeMode.Even && fire != null)
         {
             if (g_smoke.activeInHierarchy)
                 g_smoke.SetActive(false);
@@ -71,12 +73,25 @@ public class SmokeBuildUp : MonoBehaviour
             RenderSettings.fogDensity += (buildUpSpeed / 10000);
             yield return new WaitForSeconds(0.01f);
         }
-        while (smoke == smokeMode.Vertical)
+        while (smoke == smokeMode.Vertical && fire != null)
         {
             if (!g_smoke.activeInHierarchy)
                 g_smoke.SetActive(true);
 
             g_smoke.GetComponent<ParticleSystem>().startLifetime += (buildUpSpeed / 500);
+            yield return new WaitForSeconds(0.01f);
+        }
+
+        while (fire == null)
+        {
+            if (smoke == smokeMode.Even)
+            {
+
+            }
+            else if (smoke == smokeMode.Vertical)
+            {
+                g_smoke.GetComponent<ParticleSystem>().startLifetime -= (buildUpSpeed / 500);
+            }
             yield return new WaitForSeconds(0.01f);
         }
     }
