@@ -630,6 +630,7 @@
     <Compile Include="Assets\Scripts\InfoCollector.cs" />
     <Compile Include="Assets\Scripts\Liquid.cs" />
     <Compile Include="Assets\Scripts\SmokeBuildUp.cs" />
+    <Compile Include="Assets\Scripts\SoundHandler.cs" />
     <Compile Include="Assets\Scripts\TakeBlanket.cs" />
     <Compile Include="Assets\Scripts\Test.cs" />
     <Compile Include="Assets\Scripts\WaterOnOil.cs" />
