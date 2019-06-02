@@ -67,7 +67,7 @@
     <Compile Include="Assets\Scripts\DestroyWaterParticle.cs" />
     <Compile Include="Assets\Scripts\EndScene.cs" />
     <Compile Include="Assets\Scripts\ExtinguishByPulver.cs" />
-    <Compile Include="Assets\Scripts\fireExtinguisher.cs" />
+    <Compile Include="Assets\Scripts\FireExtinguisher.cs" />
     <Compile Include="Assets\Scripts\GameOver.cs" />
     <Compile Include="Assets\Scripts\Hatet kommer att vinna\ComponentExtension.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
