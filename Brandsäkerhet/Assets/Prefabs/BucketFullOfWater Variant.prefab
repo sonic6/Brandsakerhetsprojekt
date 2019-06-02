@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530647039480871954}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.01237, z: -0}
+  m_LocalPosition: {x: 0, y: 0.01188, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8908517233190372518}
@@ -149,7 +149,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 7072732182189924235, guid: d56d420e2c5565341aa6a4333c3f02ec, type: 3}
 --- !u!114 &1313474041
@@ -285,17 +285,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: d56d420e2c5565341aa6a4333c3f02ec,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.98
+      value: 4.7551
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d56d420e2c5565341aa6a4333c3f02ec,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.81
+      value: 0.661
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d56d420e2c5565341aa6a4333c3f02ec,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.69
+      value: 0.54393
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d56d420e2c5565341aa6a4333c3f02ec,
         type: 3}
@@ -340,17 +340,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: d56d420e2c5565341aa6a4333c3f02ec,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 35.776
+      value: 16.391132
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d56d420e2c5565341aa6a4333c3f02ec,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 35.776
+      value: 16.391132
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d56d420e2c5565341aa6a4333c3f02ec,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 35.776
+      value: 16.391132
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d56d420e2c5565341aa6a4333c3f02ec, type: 3}
