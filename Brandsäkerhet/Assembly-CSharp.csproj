@@ -67,8 +67,11 @@
     <Compile Include="Assets\Scripts\DestroyWaterParticle.cs" />
     <Compile Include="Assets\Scripts\EndScene.cs" />
     <Compile Include="Assets\Scripts\ExtinguishByPulver.cs" />
-    <Compile Include="Assets\Scripts\fireExtinguisher.cs" />
+    <Compile Include="Assets\Scripts\FireExtinguisher.cs" />
+    <Compile Include="Assets\Scripts\GameOver.cs" />
     <Compile Include="Assets\Scripts\Hatet kommer att vinna\ComponentExtension.cs" />
+    <Compile Include="Assets\Scripts\Health.cs" />
+    <Compile Include="Assets\Scripts\InfoCollector.cs" />
     <Compile Include="Assets\Scripts\Liquid.cs" />
     <Compile Include="Assets\Scripts\SmokeBuildUp.cs" />
     <Compile Include="Assets\Scripts\TakeBlanket.cs" />
@@ -256,13 +259,13 @@
     <Compile Include="Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\UI_Interactions.cs" />
     <Compile Include="Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\UI_Keyboard.cs" />
     <Compile Include="Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\UseRotate.cs" />
-    <Compile Include="Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\Whirlygig.cs" />
     <Compile Include="Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\VRTK_ControllerAppearance_Example.cs" />
     <Compile Include="Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\VRTK_ControllerEvents_ListenerExample.cs" />
     <Compile Include="Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\VRTK_ControllerInteract_ListenerExample.cs" />
     <Compile Include="Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\VRTK_ControllerPointerEvents_ListenerExample.cs" />
     <Compile Include="Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\VRTK_ControllerUIPointerEvents_ListenerExample.cs" />
     <Compile Include="Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\VRTK_RoomExtender_ControllerExample.cs" />
+    <Compile Include="Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\Whirlygig.cs" />
     <Compile Include="Assets\VRTK\LegacyExampleFiles\ExampleResources\Scripts\Zipline.cs" />
     <Compile Include="Assets\VRTK\Prefabs\AvatarHands\VRTK_AvatarHandController.cs" />
     <Compile Include="Assets\VRTK\Prefabs\ConsoleViewerCanvas\VRTK_ConsoleViewer.cs" />
@@ -502,6 +505,7 @@
     <Compile Include="Assets\VRTK\Source\SDK\Unity\SDK_UnityHeadset.cs" />
     <Compile Include="Assets\VRTK\Source\SDK\Unity\SDK_UnityHeadsetTracker.cs" />
     <Compile Include="Assets\VRTK\Source\SDK\Unity\SDK_UnitySystem.cs" />
+    <Compile Include="Assets\VRTK\Source\SDK\VRTK_SDK_Bridge.cs" />
     <Compile Include="Assets\VRTK\Source\SDK\WindowsMR\Resources\InteractionSourceExtensions.cs" />
     <Compile Include="Assets\VRTK\Source\SDK\WindowsMR\Resources\WindowsApiChecker.cs" />
     <Compile Include="Assets\VRTK\Source\SDK\WindowsMR\Resources\WindowsMR_Camera.cs" />
@@ -512,7 +516,6 @@
     <Compile Include="Assets\VRTK\Source\SDK\WindowsMR\SDK_WindowsMRDefines.cs" />
     <Compile Include="Assets\VRTK\Source\SDK\WindowsMR\SDK_WindowsMRHeadset.cs" />
     <Compile Include="Assets\VRTK\Source\SDK\WindowsMR\SDK_WindowsMRSystem.cs" />
-    <Compile Include="Assets\VRTK\Source\SDK\VRTK_SDK_Bridge.cs" />
     <Compile Include="Assets\VRTK\Source\SDK\Ximmerse\SDK_XimmerseBoundaries.cs" />
     <Compile Include="Assets\VRTK\Source\SDK\Ximmerse\SDK_XimmerseController.cs" />
     <Compile Include="Assets\VRTK\Source\SDK\Ximmerse\SDK_XimmerseDefines.cs" />
@@ -556,25 +559,25 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Readme_InteractionSystem.txt" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>D:/Unity Projects/ME1599 Fördjupning i produktion för medieteknik/Brandsakerhetsprojekt/Brandsäkerhet/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>E:/Game projects/Brandsakerhetsprojekt/Brandsäkerhet/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/Unity Projects/ME1599 Fördjupning i produktion för medieteknik/Brandsakerhetsprojekt/Brandsäkerhet/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>E:/Game projects/Brandsakerhetsprojekt/Brandsäkerhet/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/Unity Projects/ME1599 Fördjupning i produktion för medieteknik/Brandsakerhetsprojekt/Brandsäkerhet/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>E:/Game projects/Brandsakerhetsprojekt/Brandsäkerhet/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>D:/Unity Projects/ME1599 Fördjupning i produktion för medieteknik/Brandsakerhetsprojekt/Brandsäkerhet/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>E:/Game projects/Brandsakerhetsprojekt/Brandsäkerhet/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/Unity Projects/ME1599 Fördjupning i produktion för medieteknik/Brandsakerhetsprojekt/Brandsäkerhet/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>E:/Game projects/Brandsakerhetsprojekt/Brandsäkerhet/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/Unity Projects/ME1599 Fördjupning i produktion för medieteknik/Brandsakerhetsprojekt/Brandsäkerhet/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>E:/Game projects/Brandsakerhetsprojekt/Brandsäkerhet/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>D:/Unity Projects/ME1599 Fördjupning i produktion för medieteknik/Brandsakerhetsprojekt/Brandsäkerhet/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>E:/Game projects/Brandsakerhetsprojekt/Brandsäkerhet/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -760,13 +763,13 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.1f1/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>D:/Unity Projects/ME1599 Fördjupning i produktion för medieteknik/Brandsakerhetsprojekt/Brandsäkerhet/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>E:/Game projects/Brandsakerhetsprojekt/Brandsäkerhet/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>D:/Unity Projects/ME1599 Fördjupning i produktion för medieteknik/Brandsakerhetsprojekt/Brandsäkerhet/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>E:/Game projects/Brandsakerhetsprojekt/Brandsäkerhet/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>D:/Unity Projects/ME1599 Fördjupning i produktion för medieteknik/Brandsakerhetsprojekt/Brandsäkerhet/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>E:/Game projects/Brandsakerhetsprojekt/Brandsäkerhet/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.1f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
