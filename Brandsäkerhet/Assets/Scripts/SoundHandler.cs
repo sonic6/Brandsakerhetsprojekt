@@ -9,6 +9,8 @@ public class SoundHandler : MonoBehaviour
     private AudioSource audio_source;
     public List<ParticleSystem> fires;
     private bool isPlaying = false;
+    private VRTK_ControllerEvents events;
+    private VRTK_ControllerReference controller_ref;
 
     [Tooltip("Decides the source of the sound.")]
     [SerializeField] private type _type = new type();
@@ -18,6 +20,16 @@ public class SoundHandler : MonoBehaviour
 
     [Tooltip("Decides the delay before the audio clip plays when the requirements for playing has been met.")]
     [SerializeField] private float audio_delay;
+
+
+    private void Awake()
+    {
+        if (_type == type.steps)
+        {
+            events = FindObjectOfType<VRTK_ControllerEvents>();
+            controller_ref = VRTK_DeviceFinder.GetControllerReferenceLeftHand();
+        }
+    }
 
 
     void Start()
@@ -67,6 +79,7 @@ public class SoundHandler : MonoBehaviour
 
             case type.steps:
                 // TODO: You know the drill by this point..
+                Stepping();
                 break;
 
             default:
@@ -75,9 +88,16 @@ public class SoundHandler : MonoBehaviour
     }
 
 
+    /// <summary>
+    /// Handles stepping sounds.
+    /// </summary>
     private void Stepping ()
     {
-        VRTK_ControllerEvents controller;
+        if (!isPlaying && events.touchpadPressed && VRTK_DeviceFinder.GetControllerVelocity(controller_ref) != Vector3.zero)
+            StartCoroutine(PlaySound());
+
+        else if (!events.touchpadPressed || VRTK_DeviceFinder.GetControllerVelocity(controller_ref) == Vector3.zero)
+            StopSound();
     }
 
 
