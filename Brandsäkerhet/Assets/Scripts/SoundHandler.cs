@@ -26,6 +26,11 @@ public class SoundHandler : MonoBehaviour
             audio_source = GetComponent<AudioSource>();
             audio_source.clip = _audio;
         }
+        else if (!GetComponent<AudioSource>())
+        {
+            audio_source = gameObject.AddComponent<AudioSource>();
+            audio_source.clip = _audio;
+        }
     }
 
 
