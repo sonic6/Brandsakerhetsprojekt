@@ -15,6 +15,7 @@ public class SmokeBuildUp : MonoBehaviour
     private enum renderMode { Exponential };
     private enum smokeMode { Even, Vertical, None };
 
+
     [SerializeField] private ParticleSystem[] particleSystems;
     private ParticleSystem fire;
 
@@ -36,6 +37,15 @@ public class SmokeBuildUp : MonoBehaviour
     [Tooltip("This one's only important if you're using Vertical smokeMode. Otherwise, ignore. \n " +
         "(I will make the script more self sufficient at a later date.. If I have time.)")]
     [SerializeField] private GameObject g_smoke;
+
+
+    private void Awake()
+    {
+        foreach (SoundHandler handler in FindObjectsOfType<SoundHandler>())
+        {
+            handler.fires.Add(gameObject);
+        }
+    }
 
 
     void Start()
