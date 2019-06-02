@@ -49,7 +49,8 @@ public class SoundHandler : MonoBehaviour
                 break;
 
             case type.fire:
-                StartCoroutine(PlaySound());
+                if (!isPlaying)
+                    StartCoroutine(PlaySound());
                 break;
 
             case type.fire_ex:
