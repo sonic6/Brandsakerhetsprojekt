@@ -77,6 +77,16 @@ public class SoundHandler : MonoBehaviour
     }
 
 
+    /// <summary>
+    /// A lazy override for playing sick tunes. Use it if you wanna start the sound from outside the script.
+    /// </summary>
+    public void StartSoundOverride()
+    {
+        if (isPlaying == false)
+            PlaySound();
+    }
+
+
     private IEnumerator PlaySound ()
     {
         isPlaying = true;
