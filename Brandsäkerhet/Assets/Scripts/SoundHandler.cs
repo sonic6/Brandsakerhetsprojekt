@@ -96,7 +96,7 @@ public class SoundHandler : MonoBehaviour
         if (!isPlaying && events.touchpadPressed && VRTK_DeviceFinder.GetControllerVelocity(controller_ref) != Vector3.zero)
             StartCoroutine(PlaySound());
 
-        else if (!events.touchpadPressed || VRTK_DeviceFinder.GetControllerVelocity(controller_ref) == Vector3.zero)
+        else if (!events.touchpadPressed)
             StopSound();
     }
 
