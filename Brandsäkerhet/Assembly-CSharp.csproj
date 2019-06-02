@@ -68,9 +68,13 @@
     <Compile Include="Assets\Scripts\EndScene.cs" />
     <Compile Include="Assets\Scripts\ExtinguishByPulver.cs" />
     <Compile Include="Assets\Scripts\fireExtinguisher.cs" />
+    <Compile Include="Assets\Scripts\GameOver.cs" />
     <Compile Include="Assets\Scripts\Hatet kommer att vinna\ComponentExtension.cs" />
+    <Compile Include="Assets\Scripts\Health.cs" />
+    <Compile Include="Assets\Scripts\InfoCollector.cs" />
     <Compile Include="Assets\Scripts\Liquid.cs" />
     <Compile Include="Assets\Scripts\SmokeBuildUp.cs" />
+    <Compile Include="Assets\Scripts\SoundHandler.cs" />
     <Compile Include="Assets\Scripts\TakeBlanket.cs" />
     <Compile Include="Assets\Scripts\Test.cs" />
     <Compile Include="Assets\Scripts\WaterOnOil.cs" />
