@@ -86,7 +86,7 @@ public class SoundHandler : MonoBehaviour
     public void StartSoundOverride()
     {
         if (isPlaying == false)
-            PlaySound();
+            StartCoroutine(PlaySound());
     }
 
 
