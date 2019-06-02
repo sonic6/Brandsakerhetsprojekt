@@ -26,8 +26,13 @@ public class SoundHandler : MonoBehaviour
     {
         if (_type == type.steps)
         {
-            events = FindObjectOfType<VRTK_ControllerEvents>();
             controller_ref = VRTK_DeviceFinder.GetControllerReferenceLeftHand();
+
+            foreach (VRTK_ControllerEvents _event in FindObjectsOfType<VRTK_ControllerEvents>())
+            {
+                if (_event.gameObject.name == "LeftController")
+                    events = _event;
+            }
         }
     }
 
@@ -96,7 +101,7 @@ public class SoundHandler : MonoBehaviour
         if (!isPlaying && events.touchpadPressed && VRTK_DeviceFinder.GetControllerVelocity(controller_ref) != Vector3.zero)
             StartCoroutine(PlaySound());
 
-        else if (!events.touchpadPressed || VRTK_DeviceFinder.GetControllerVelocity(controller_ref) == Vector3.zero)
+        else if (!events.touchpadPressed)
             StopSound();
     }
 
