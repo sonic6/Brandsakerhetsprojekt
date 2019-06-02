@@ -434,7 +434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fires: []
-  _type: 3
+  _type: 0
   _audio: {fileID: 0}
   audio_delay: 0
 --- !u!65 &264273692

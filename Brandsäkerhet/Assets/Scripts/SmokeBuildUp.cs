@@ -41,9 +41,16 @@ public class SmokeBuildUp : MonoBehaviour
 
     private void Awake()
     {
+        particleSystems = GetComponentsInChildren<ParticleSystem>();
+        foreach (ParticleSystem c in particleSystems)
+        {
+            if (c.gameObject.name == "Fire")
+                fire = c;
+        }
+
         foreach (SoundHandler handler in FindObjectsOfType<SoundHandler>())
         {
-            handler.fires.Add(gameObject);
+            handler.fires.Add(fire);
         }
     }
 
@@ -60,13 +67,6 @@ public class SmokeBuildUp : MonoBehaviour
         {
             RenderSettings.fogColor = new Color(0.2f, 0.2f, 0.2f);
             RenderSettings.fog = true;
-        }
-
-        particleSystems = GetComponentsInChildren<ParticleSystem>();
-        foreach (ParticleSystem c in particleSystems)
-        {
-            if (c.gameObject.name == "Fire")
-                fire = c;
         }
     }
 

@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VRTK;
 
 public class SoundHandler : MonoBehaviour
 {
     private enum type { fire_alarm, steps, door, fire_ex, fire }
     private AudioSource audio_source;
-    public List<GameObject> fires;
+    public List<ParticleSystem> fires;
     private bool isPlaying = false;
 
     [Tooltip("Decides the source of the sound.")]
@@ -51,6 +52,9 @@ public class SoundHandler : MonoBehaviour
             case type.fire:
                 if (!isPlaying)
                     StartCoroutine(PlaySound());
+
+                if (!IsBurning())
+                    StopSound();
                 break;
 
             case type.fire_ex:
@@ -68,6 +72,12 @@ public class SoundHandler : MonoBehaviour
             default:
                 break;
         }
+    }
+
+
+    private void Stepping ()
+    {
+        VRTK_ControllerEvents controller;
     }
 
 
@@ -90,6 +100,10 @@ public class SoundHandler : MonoBehaviour
     }
 
 
+    /// <summary>
+    /// Plays the sound.
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator PlaySound ()
     {
         isPlaying = true;
@@ -112,7 +126,7 @@ public class SoundHandler : MonoBehaviour
     /// </summary>
     private void FireCheck ()
     {
-        foreach (GameObject fire in fires)
+        foreach (ParticleSystem fire in fires)
         {
             if (fire == null)
             {
@@ -122,5 +136,16 @@ public class SoundHandler : MonoBehaviour
 
         if (fires.Count == 0)
             isPlaying = false;
+    }
+
+    private bool IsBurning ()
+    {
+        foreach (ParticleSystem a in GetComponentsInChildren<ParticleSystem>())
+        {
+            if (a.gameObject.name == "Fire")
+                return true;
+        }
+
+        return false;
     }
 }
