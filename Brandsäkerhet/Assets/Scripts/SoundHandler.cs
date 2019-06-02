@@ -24,11 +24,13 @@ public class SoundHandler : MonoBehaviour
         if (GetComponent<AudioSource>())
         {
             audio_source = GetComponent<AudioSource>();
+            audio_source.loop = true;
             audio_source.clip = _audio;
         }
         else if (!GetComponent<AudioSource>())
         {
             audio_source = gameObject.AddComponent<AudioSource>();
+            audio_source.loop = true;
             audio_source.clip = _audio;
         }
     }
