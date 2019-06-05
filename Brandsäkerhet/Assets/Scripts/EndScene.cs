@@ -31,6 +31,16 @@ public class EndScene : MonoBehaviour
         SceneManager.LoadScene(nextScene);
     }
 
+    public void Restart()
+    {
+        SceneManager.LoadScene("MainScene");
+    }
+
+    public void CloseGame()
+    {
+        Application.Quit();
+    }
+
 
     private void Start()
     {

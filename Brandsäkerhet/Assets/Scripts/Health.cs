@@ -10,6 +10,8 @@ public class Health : MonoBehaviour
     [SerializeField] Animator anim;
     [Tooltip("The speed of the animation played by the Animator")]
     [SerializeField] float animSpeed;
+    [Tooltip("toggle wether you want to use an on screen animated damage UI or not")]
+    [SerializeField] bool useAnimator = false;
 
     private void Start()
     {
@@ -21,12 +23,16 @@ public class Health : MonoBehaviour
     {
         if (myHead.transform.localPosition.y < 1f)
         {
-            anim.SetFloat("speed", -animSpeed);
+            if(useAnimator == true)
+                anim.SetFloat("speed", -animSpeed);
+
             myHealth = myHealth - 0.7f * Time.deltaTime;
         }
         else if (myHead.transform.localPosition.y >= 1f)
         {
-            anim.SetFloat("speed", animSpeed);
+            if (useAnimator == true)
+                anim.SetFloat("speed", animSpeed);
+
             myHealth = myHealth - 1 * Time.deltaTime;
         }
 

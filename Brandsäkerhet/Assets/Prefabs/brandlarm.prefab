@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8029684152479117591}
   - component: {fileID: 8029684152479117590}
   - component: {fileID: 8029684152479117589}
-  - component: {fileID: 8029684152479117588}
+  - component: {fileID: 5444664006295023569}
   m_Layer: 0
   m_Name: brandlarm
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 8029684152479117587}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.019, y: 0.586, z: 0.416}
-  m_LocalScale: {x: 1, y: 0.091544, z: 1}
+  m_LocalScale: {x: 25.329, y: 25.329, z: 25.329}
   m_Children:
   - {fileID: 8029684153357408093}
   m_Father: {fileID: 0}
@@ -41,7 +41,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8029684152479117587}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 8421744311104621043, guid: 96f3fe42b6b85b248a8b810407361b41, type: 3}
 --- !u!23 &8029684152479117589
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 03265a38801b8014c945af54fb38bbfa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,7 +79,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &8029684152479117588
+--- !u!136 &5444664006295023569
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,10 +89,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
+  m_Radius: 0.0075658103
+  m_Height: 0.004121853
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8029684153357408092
 GameObject:
   m_ObjectHideFlags: 0

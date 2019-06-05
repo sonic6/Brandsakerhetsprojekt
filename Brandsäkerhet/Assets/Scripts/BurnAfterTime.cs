@@ -9,6 +9,7 @@ public class BurnAfterTime : MonoBehaviour
     private GameObject mySmoke;
     SmokeBuildUp mySmokeBuilder;
     [SerializeField] SoundHandler alarmSound;
+    [SerializeField] Animator alarm;
 
     private void Awake()
     {
@@ -36,6 +37,7 @@ public class BurnAfterTime : MonoBehaviour
         mySmoke.SetActive(true);
         mySmokeBuilder.enabled = true;
         alarmSound.enabled = true;
+        alarm.SetBool("light", true);
     }
     
 }

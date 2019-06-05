@@ -4,6 +4,7 @@ public class BlanketExtinguish : MonoBehaviour
 {
     public int myTriggers;
     public GameObject[] triggerChildren;
+    [SerializeField] Animator alarm;
 
     private void Start()
     {
@@ -18,6 +19,8 @@ public class BlanketExtinguish : MonoBehaviour
         if (myTriggers == triggerChildren.Length)
         {
             Destroy(GetComponentInChildren<ParticleSystem>());
+            Destroy(GetComponentInChildren<Light>());
+            alarm.SetBool("light", false);
             InfoCollector.fireCondition = false;
         }
     }

@@ -3,6 +3,8 @@
 public class WaterOnOil : MonoBehaviour
 {
     private bool waterCollided;
+    [SerializeField] float fireRadiusOnIncrease = 1f;
+    [SerializeField] float fireAmountIncrease = 40f;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -17,7 +19,9 @@ public class WaterOnOil : MonoBehaviour
         if (waterCollided == true)
         {
             var myShape = GetComponentInChildren<ParticleSystem>().shape; //You can only modify shape if it's within a new variable you've created
-            myShape.radius = Mathf.Lerp(0.1f, 30f, Time.deltaTime);
+            var myEmission = GetComponentInChildren<ParticleSystem>().emission;
+            myShape.radius = Mathf.MoveTowards(myShape.radius, fireRadiusOnIncrease, Time.deltaTime * 2);
+            myEmission.rateOverTime = fireAmountIncrease;
             InfoCollector.fireIncreased = true;
             waterCollided = false;
         }
