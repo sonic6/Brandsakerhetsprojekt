@@ -62,6 +62,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Ahmad\Scripts\BlanketExtinguish.cs" />
+    <Compile Include="Assets\Ahmad\Scripts\BurnAfterTime.cs" />
+    <Compile Include="Assets\Ahmad\Scripts\DestroyWaterParticle.cs" />
+    <Compile Include="Assets\Ahmad\Scripts\EndScene.cs" />
+    <Compile Include="Assets\Ahmad\Scripts\ExtinguishByPulver.cs" />
+    <Compile Include="Assets\Ahmad\Scripts\FireExtinguisher.cs" />
+    <Compile Include="Assets\Ahmad\Scripts\GameOver.cs" />
+    <Compile Include="Assets\Ahmad\Scripts\Health.cs" />
+    <Compile Include="Assets\Ahmad\Scripts\InfoCollector.cs" />
+    <Compile Include="Assets\Ahmad\Scripts\Liquid.cs" />
+    <Compile Include="Assets\Ahmad\Scripts\TakeBlanket.cs" />
+    <Compile Include="Assets\Ahmad\Scripts\WaterOnOil.cs" />
     <Compile Include="Assets\Obi\Rendering\ObiBaseFluidRenderer.cs" />
     <Compile Include="Assets\Obi\Rendering\ObiDistanceFieldRenderer.cs" />
     <Compile Include="Assets\Obi\Rendering\ObiInstancedParticleRenderer.cs" />
@@ -88,22 +100,9 @@
     <Compile Include="Assets\Obi\Sample Scenes\SampleResources\Scripts\RuntimeClothGenerator.cs" />
     <Compile Include="Assets\Obi\Sample Scenes\SampleResources\Scripts\SackGenerator.cs" />
     <Compile Include="Assets\Obi\Sample Scenes\SampleResources\Scripts\SlowmoToggler.cs" />
-    <Compile Include="Assets\Scripts\BlanketExtinguish.cs" />
-    <Compile Include="Assets\Scripts\BurnAfterTime.cs" />
-    <Compile Include="Assets\Scripts\DestroyWaterParticle.cs" />
-    <Compile Include="Assets\Scripts\EndScene.cs" />
-    <Compile Include="Assets\Scripts\ExtinguishByPulver.cs" />
-    <Compile Include="Assets\Scripts\FireExtinguisher.cs" />
-    <Compile Include="Assets\Scripts\GameOver.cs" />
-    <Compile Include="Assets\Scripts\Hatet kommer att vinna\ComponentExtension.cs" />
-    <Compile Include="Assets\Scripts\Health.cs" />
-    <Compile Include="Assets\Scripts\InfoCollector.cs" />
-    <Compile Include="Assets\Scripts\Liquid.cs" />
-    <Compile Include="Assets\Scripts\SmokeBuildUp.cs" />
-    <Compile Include="Assets\Scripts\SoundHandler.cs" />
-    <Compile Include="Assets\Scripts\TakeBlanket.cs" />
-    <Compile Include="Assets\Scripts\Test.cs" />
-    <Compile Include="Assets\Scripts\WaterOnOil.cs" />
+    <Compile Include="Assets\Sebastian\Hatet kommer att vinna\ComponentExtension.cs" />
+    <Compile Include="Assets\Sebastian\SmokeBuildUp.cs" />
+    <Compile Include="Assets\Sebastian\SoundHandler.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_LaserPointer.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_Teleporter.cs" />
@@ -554,7 +553,7 @@
     <None Include="Assets\SteamVR\Resources\SteamVR_ClearAll.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Hints\Shaders\ControllerButtonHints.shader" />
     <None Include="Assets\Obi\Resources\ObiMaterials\ParticleShader.shader" />
-    <None Include="Assets\Shaders\fireSmoke.shader" />
+    <None Include="Assets\Sebastian\Shaders\fireSmoke.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\VRTK\Documentation.txt" />
     <None Include="Assets\VRTK\Source\Scripts\Internal\Shaders\UIOverlay.shader" />
