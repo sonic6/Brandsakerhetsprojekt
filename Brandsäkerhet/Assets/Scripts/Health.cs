@@ -13,6 +13,8 @@ public class Health : MonoBehaviour
     [Tooltip("toggle wether you want to use an on screen animated damage UI or not")]
     [SerializeField] bool useAnimator = false;
 
+    private GameObject myFire;
+
     private void Start()
     {
         myHealth = myHealth * 60;
@@ -21,21 +23,22 @@ public class Health : MonoBehaviour
 
     void Update()
     {
-        if (myHead.transform.localPosition.y < 1f)
-        {
-            if(useAnimator == true)
-                anim.SetFloat("speed", -animSpeed);
+        if (GameObject.FindGameObjectWithTag("fire").GetComponentInChildren<ParticleSystem>())
+        { if (myHead.transform.localPosition.y < 1f)
+            {
+                if (useAnimator == true)
+                    anim.SetFloat("speed", -animSpeed);
 
-            myHealth = myHealth - 0.7f * Time.deltaTime;
+                myHealth = myHealth - 0.7f * Time.deltaTime;
+            }
+            else if (myHead.transform.localPosition.y >= 1f)
+            {
+                if (useAnimator == true)
+                    anim.SetFloat("speed", animSpeed);
+
+                myHealth = myHealth - 1 * Time.deltaTime;
+            }
         }
-        else if (myHead.transform.localPosition.y >= 1f)
-        {
-            if (useAnimator == true)
-                anim.SetFloat("speed", animSpeed);
-
-            myHealth = myHealth - 1 * Time.deltaTime;
-        }
-
         if (myHealth <= 0)
         {
             PlayerPrefs.SetInt("Death", 1);
